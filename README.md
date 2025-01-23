@@ -12,16 +12,21 @@ Initially, you must create the package within your dotfiles directory:
 # Creating a package for nvim
 mkdir nvim/.config/
 mv ~/.config/nvim nvim/.config/nvim
+```
 
+```sh
 # Creating a package for ghostty (in macOS)
 mkdir ghostty/Library/Application\ Support/com.mitchellh.ghostty/
 mv ~/Library/Application\ Support/com.mitchellh.ghostty/config ghostty/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
 With your *salyut* packages available, you can push them to your machine:
+
 ```sh
 salyut nvim
+```
 
+```sh
 salyut ghostty
 ```
 
