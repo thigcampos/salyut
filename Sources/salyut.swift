@@ -31,7 +31,7 @@ struct salyut: ParsableCommand {
             let linkSource = baseSourceURL.appendingPathComponent(content)
             let linkTarget = baseTargetURL.appendingPathComponent(content)
 
-            if !FileManager.default.fileExists(atPath: linkTarget.path) {
+            if FileManager.default.fileExists(atPath: linkTarget.path) {
                 let contentWithinContent = try FileManager.default.contentsOfDirectory(
                     atPath: linkSource.path)
                 try createSymLink(
