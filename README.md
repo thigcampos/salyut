@@ -30,5 +30,33 @@ salyut nvim
 salyut ghostty
 ```
 
+## Installation
+Salyut is still under development and I decided to only make a release when it's core features are unit-tested.
+Given this scenario, if you want to use Salyut's binary, you will need to build it yourself.
+
+Check [Swift](https://www.swift.org/install/macos/)'s guide on how to install it, after that, clone the Salyut project:
+
+```sh
+git clone https://github.com/thigcampos/salyut.git
+
+```
+
+Then, enter the directory and run:
+
+```sh
+swift build
+```
+
+The binary will be available under `salyut/.build/debug/salyut`.
+
+## Contribution
+Salyut is developed completely in the open source model, and your contributions are more than welcome.
+
+This project does not come with GitHub Issues-based support, and users are instead encouraged to become active participants in its continued development — by fixing any bugs that they encounter, or by improving the documentation wherever it’s found to be lacking.
+
+If you wish to make a change, open a Pull Request — even if it just contains a draft of the changes you’re planning, or a test that reproduces an issue — and we can discuss it further from there.
+
+Hope you’ll enjoy using Salyut!
+
 ## License
 This project is licensed under GNU GPLv3 License. Check [LICENSE](LICENSE) for more information.
