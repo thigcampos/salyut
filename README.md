@@ -30,6 +30,13 @@ salyut nvim
 salyut ghostty
 ```
 
+#### Roadmap
+- Include a command to add a package in the salyut directory (running the `mkdir` and `mv` commands can be quite boring);
+- Include support to "dot-" prefix pre-processing based on a --dot flag (similar to `stow <package> --dotfiles` behavior);
+
+What can be included, but I'm not 100% sold on the ideia yet:  
+- Include a command to schedule sync through cron jobs;
+
 ## Installation
 Salyut is still under development and I decided to only make a release when it's core features are unit-tested.
 Given this scenario, if you want to use Salyut's binary, you will need to build it yourself.
@@ -44,9 +51,15 @@ git clone https://github.com/thigcampos/salyut.git
 Then, enter the directory and run:
 
 ```sh
-swift build
+swift build -c release -Xswiftc -Osize
 ```
 
+If your really cares about the binary size (it's normally 1.4MB), you can run:
+
+```sh
+strip -u -r .build/release/salyut
+```
+Reducing the binary size to 636K. 
 The binary will be available under `salyut/.build/debug/salyut`.
 
 ## Contribution
