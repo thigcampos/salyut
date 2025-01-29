@@ -1,0 +1,13 @@
+[package]
+name = "salyut"
+version = "0.1.0"
+license = "GPLv3"
+edition = "2021"
+rust-version = "1.83"
+categories = ["command-line-utilities"]
+authors = ["Thiago Campos <commit@thigcampos.com>"]
+description = "An utility terminal app to manage dotfiles"
+homepage = "https://github.com/thigcampos/salyut"
+repository = "https://github.com/thigcampos/salyut"
+
+[dependencies]

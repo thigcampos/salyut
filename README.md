@@ -41,7 +41,7 @@ What can be included, but I'm not 100% sold on the ideia yet:
 Salyut is still under development and I decided to only make a release when it's core features are unit-tested.
 Given this scenario, if you want to use Salyut's binary, you will need to build it yourself.
 
-Check [Swift](https://www.swift.org/install/macos/)'s guide on how to install it, after that, clone the Salyut project:
+Check [Rust](https://www.rust-lang.org/tools/install)'s guide on how to install it, after that, clone the Salyut project:
 
 ```sh
 git clone https://github.com/thigcampos/salyut.git
@@ -51,16 +51,8 @@ git clone https://github.com/thigcampos/salyut.git
 Then, enter the directory and run:
 
 ```sh
-swift build -c release -Xswiftc -Osize
+cargo build -r 
 ```
-
-If your really cares about the binary size (it's normally 1.4MB), you can run:
-
-```sh
-strip -u -r .build/release/salyut
-```
-Reducing the binary size to 636K. 
-The binary will be available under `salyut/.build/debug/salyut`.
 
 ## Contribution
 Salyut is developed completely in the open source model, and your contributions are more than welcome.
