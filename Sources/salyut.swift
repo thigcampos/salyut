@@ -8,7 +8,7 @@ import ArgumentParser
 import Foundation
 
 @main
-struct salyut: ParsableCommand {
+struct Salyut: ParsableCommand {
     @Argument(help: "A package from Salyut directory")
     var package: String
 
