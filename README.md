@@ -1,9 +1,5 @@
-# Salyut | Салют
-[Salyut](https://en.wikipedia.org/wiki/Salyut_programme) is an elegant and simple dotfiles manager for macOS, inspired by [GNU Stow](https://www.gnu.org/software/stow/).
-
-## Etymology
-Salyut is named after a Soviet space station program that launched the first crewed space station. Here's an excerpt from Wikipedia:
-> The Salyut programme (Russian: Салют, IPA: [sɐˈlʲut], meaning "salute" or "fireworks") was the first space station programme, undertaken by the Soviet Union. It involved a series of four crewed scientific research space stations and two crewed military reconnaissance space stations over a period of 15 years, from 1971 to 1986. In one respect, Salyut had the space-race task of carrying out long-term research into the problems of living in space and a variety of astronomical, biological, and Earth-resources experiments. On the other hand, the USSR used this civilian programme as a cover for the highly secretive military Almaz stations, which flew under the Salyut designation. Salyut 1, the first station in the program, became the world's first crewed space station.
+# Porto 
+Porto is a simple yet elegant dotfiles manager for macOS and Linux, inspired by [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Usage
 Initially, you must create the package within your dotfiles directory:
@@ -20,48 +16,48 @@ mkdir ghostty/Library/Application\ Support/com.mitchellh.ghostty/
 mv ~/Library/Application\ Support/com.mitchellh.ghostty/config ghostty/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
-With your *salyut* packages available, you can push them to your machine:
+With your *porto* packages available, you can push them to your machine:
 
 ```sh
-salyut nvim
+porto nvim
 ```
 
 ```sh
-salyut ghostty
+porto ghostty
 ```
 
 #### Roadmap
-- Include a command to add a package in the salyut directory (running the `mkdir` and `mv` commands can be quite boring);
+- Include a command to add a package in the porto directory (running the `mkdir` and `mv` commands can be quite boring);
 - Include support to "dot-" prefix pre-processing based on a --dot flag (similar to `stow <package> --dotfiles` behavior);
 
 What can be included, but I'm not 100% sold on the ideia yet:  
 - Include a command to schedule sync through cron jobs;
 
 ## Installation
-Salyut is still under development and I decided to only make a release when it's core features are unit-tested.
-Given this scenario, if you want to use Salyut's binary, you will need to build it yourself.
+Porto is still under development and I decided to only make a release when it's core features are unit-tested.
+Given this scenario, if you want to use Porto's binary, you will need to build it yourself.
 
-Check [Rust](https://www.rust-lang.org/tools/install)'s guide on how to install it, after that, clone the Salyut project:
+Check [Rust](https://www.rust-lang.org/tools/install)'s guide on how to install it, after that, clone the Porto project:
 
 ```sh
-git clone https://github.com/thigcampos/salyut.git
+git clone https://github.com/thigcampos/porto.git
 
 ```
 
 Then, enter the directory and run:
 
 ```sh
-cargo build -r 
+cargo build --release
 ```
 
 ## Contribution
-Salyut is developed completely in the open source model, and your contributions are more than welcome.
+Porto is developed completely in the open source model, and your contributions are more than welcome.
 
 This project does not come with GitHub Issues-based support, and users are instead encouraged to become active participants in its continued development — by fixing any bugs that they encounter, or by improving the documentation wherever it’s found to be lacking.
 
 If you wish to make a change, open a Pull Request — even if it just contains a draft of the changes you’re planning, or a test that reproduces an issue — and we can discuss it further from there.
 
-Hope you’ll enjoy using Salyut!
+Hope you’ll enjoy using Porto!
 
 ## License
 This project is licensed under GNU GPLv3 License. Check [LICENSE](LICENSE) for more information.
