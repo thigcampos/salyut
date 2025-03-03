@@ -9,6 +9,9 @@ import Foundation
 
 @main
 struct Salyut: ParsableCommand {
+    @Flag(help: "Enables special handling for Salyut packages that start with 'dot-' and not '.'")
+    var dotfiles = false
+
     @Argument(help: "A package from Salyut directory")
     var package: String
 
@@ -29,7 +32,10 @@ struct Salyut: ParsableCommand {
     func createSymLink(packageContent: [String], baseSourceURL: URL, baseTargetURL: URL) throws {
         for content in packageContent {
             let linkSource = baseSourceURL.appendingPathComponent(content)
-            let linkTarget = baseTargetURL.appendingPathComponent(content)
+
+            let contentPath =
+                dotfiles ? content.replacingOccurrences(of: "dot-", with: ".") : content
+            let linkTarget = baseTargetURL.appendingPathComponent(contentPath)
 
             if FileManager.default.fileExists(atPath: linkTarget.path) {
                 let contentWithinContent = try FileManager.default.contentsOfDirectory(

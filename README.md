@@ -32,7 +32,7 @@ salyut ghostty
 
 #### Roadmap
 - Include a command to add a package in the salyut directory (running the `mkdir` and `mv` commands can be quite boring);
-- Include support to "dot-" prefix pre-processing based on a --dot flag (similar to `stow <package> --dotfiles` behavior);
+- DONE: Include support to "dot-" prefix pre-processing based on a --dot flag (similar to `stow <package> --dotfiles` behavior);
 
 What can be included, but I'm not 100% sold on the ideia yet:  
 - Include a command to schedule sync through cron jobs;
