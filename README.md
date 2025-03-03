@@ -30,12 +30,12 @@ salyut nvim
 salyut ghostty
 ```
 
-#### Roadmap
-- Include a command to add a package in the salyut directory (running the `mkdir` and `mv` commands can be quite boring);
-- DONE: Include support to "dot-" prefix pre-processing based on a --dot flag (similar to `stow <package> --dotfiles` behavior);
+## Roadmap
+- [ ] Include a command to add a package in the salyut directory, using --adopt flag (running the `mkdir` and `mv` commands can be quite boring);
+- [X] Include support to "dot-" prefix pre-processing based on a --dotfiles flag (similar to `stow <package> --dotfiles` behavior);
 
 What can be included, but I'm not 100% sold on the ideia yet:  
-- Include a command to schedule sync through cron jobs;
+- [ ] Include a command to schedule sync through cron jobs;
 
 ## Installation
 Salyut is still under development and I decided to only make a release when it's core features are unit-tested.
