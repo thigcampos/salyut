@@ -47,11 +47,11 @@ struct Salyut: ParsableCommand {
                 do {
                     try FileManager.default.createSymbolicLink(
                         at: linkTarget, withDestinationURL: linkSource)
-                    print("\(package) installed!")
                 } catch {
                     print("Installation failed due to: \(error.localizedDescription)")
                 }
             }
+            print("\(package) installed!")
         }
     }
 }
