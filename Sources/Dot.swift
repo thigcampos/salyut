@@ -8,11 +8,11 @@ import ArgumentParser
 import Foundation
 
 @main
-struct Salyut: ParsableCommand {
-    @Flag(help: "Enables special handling for Salyut packages that start with 'dot-' and not '.'")
+struct Dot: ParsableCommand {
+    @Flag(help: "Enables special handling for packages that start with 'dot-' and not '.'")
     var dotfiles = false
 
-    @Argument(help: "A package from Salyut directory")
+    @Argument(help: "A package from dotfiles directory")
     var package: String
 
     mutating func run() throws {
