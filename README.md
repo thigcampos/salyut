@@ -1,5 +1,5 @@
 # Dot
-Dot is an elegant and simple dotfiles manager for macOS, inspired by [GNU Stow](https://www.gnu.org/software/stow/).
+Dot is an elegant and simple dotfiles manager for *unix, inspired by [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Usage
 Initially, you must create the package within your dotfiles directory:
@@ -26,12 +26,10 @@ dot nvim
 dot ghostty
 ```
 
-## Roaddot
-- [ ] Include a command to add a package in the dot directory, using --adopt flag (running the `mkdir` and `mv` commands can be quite boring);
+## Roadmap 
+- [ ] Move away from Swift adopting Rust or Zig languages
 - [X] Include support to "dot-" prefix pre-processing based on a --dotfiles flag (similar to `stow <package> --dotfiles` behavior);
-
-What can be included, but I'm not 100% sold on the ideia yet:  
-- [ ] Include a command to schedule sync through cron jobs;
+- [ ] Include a command to add a package in the dot directory, using --adopt flag (running the `mkdir` and `mv` commands can be quite boring);
 
 ## Installation
 Dot is still under development and I decided to only make a release when it's core features are unit-tested.
