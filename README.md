@@ -1,9 +1,5 @@
-# Dot | Салют
-[Dot](https://en.wikipedia.org/wiki/Dot_programme) is an elegant and simple dotfiles manager for macOS, inspired by [GNU Stow](https://www.gnu.org/software/stow/).
-
-## Etymology
-Dot is named after a Soviet space station program that launched the first crewed space station. Here's an excerpt from Wikipedia:
-> The Dot programme (Russian: Салют, IPA: [sɐˈlʲut], meaning "salute" or "fireworks") was the first space station programme, undertaken by the Soviet Union. It involved a series of four crewed scientific research space stations and two crewed military reconnaissance space stations over a period of 15 years, from 1971 to 1986. In one respect, Dot had the space-race task of carrying out long-term research into the problems of living in space and a variety of astronomical, biological, and Earth-resources experiments. On the other hand, the USSR used this civilian programme as a cover for the highly secretive military Almaz stations, which flew under the Dot designation. Dot 1, the first station in the program, became the world's first crewed space station.
+# Dot
+Dot is an elegant and simple dotfiles manager for macOS, inspired by [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Usage
 Initially, you must create the package within your dotfiles directory:
