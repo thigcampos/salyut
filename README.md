@@ -10,12 +10,6 @@ mkdir nvim/.config/
 mv ~/.config/nvim nvim/.config/nvim
 ```
 
-```sh
-# Creating a package for ghostty (in macOS)
-mkdir ghostty/Library/Application\ Support/com.mitchellh.ghostty/
-mv ~/Library/Application\ Support/com.mitchellh.ghostty/config ghostty/Library/Application\ Support/com.mitchellh.ghostty/config
-```
-
 With your *dot* packages available, you can push them to your machine:
 
 ```sh
@@ -35,10 +29,10 @@ dot ghostty
 Dot is still under development and I decided to only make a release when it's core features are unit-tested.
 Given this scenario, if you want to use Dot's binary, you will need to build it yourself.
 
-Check [Swift](https://www.swift.org/install/macos/)'s guide on how to install it, after that, clone the Dot project:
+Check [Zig](https://ziglang.org/learn/getting-started/)'s guide on how to install it, after that, clone the Dot project:
 
 ```sh
-git clone https://github.com/thigcampos/dot.git
+git clone https://github.com/avantguarda/dot.git
 
 ```
 
