@@ -21,7 +21,7 @@ dot ghostty
 ```
 
 ## Roadmap 
-- [ ] Move away from Swift adopting Rust or Zig languages
+- [X] Move away from Swift adopting Rust or Zig languages
 - [X] Include support to "dot-" prefix pre-processing based on a --dotfiles flag (similar to `stow <package> --dotfiles` behavior);
 - [ ] Include a command to add a package in the dot directory, using --adopt flag (running the `mkdir` and `mv` commands can be quite boring);
 
@@ -39,16 +39,10 @@ git clone https://github.com/avantguarda/dot.git
 Then, enter the directory and run:
 
 ```sh
-swift build -c release -Xswiftc -Osize
+zig build --release
 ```
 
-If your really cares about the binary size (it's normally 1.4MB), you can run:
-
-```sh
-strip -u -r .build/release/dot
-```
-Reducing the binary size to 636K. 
-The binary will be available under `dot/.build/debug/dot`.
+The binary will be available under `zig-out/bin/dot`.
 
 ## Contribution
 Dot is developed completely in the open source model, and your contributions are more than welcome.
