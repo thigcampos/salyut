@@ -18,6 +18,13 @@ pub fn build(b: *std.Build) void {
 
     b.installArtifact(exe);
 
+    const toml = b.dependency("toml", .{
+        .target = target,
+        .optimize = optimize,
+    });
+
+    exe.root_module.addImport("toml", toml.module("toml"));
+
     const run_cmd = b.addRunArtifact(exe);
 
     run_cmd.step.dependOn(b.getInstallStep());

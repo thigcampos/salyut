@@ -4,6 +4,10 @@
     .fingerprint = 0x59278a30c3f2fbc,
     .minimum_zig_version = "0.14.1",
     .dependencies = .{
+        .toml = .{
+            .url = "git+https://github.com/sam701/zig-toml#b59298f0f3ec9bcc8a413ad06af2f64d44d5d24c",
+            .hash = "toml-0.3.0-bV14BXp4AQAfuNx6Ozigoo8ZkJbTi4uT6ZKJWIQMfuju",
+        },
     },
     .paths = .{
         "build.zig",
