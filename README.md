@@ -10,12 +10,6 @@ mkdir nvim/.config/
 mv ~/.config/nvim nvim/.config/nvim
 ```
 
-```sh
-# Creating a package for ghostty (in macOS)
-mkdir ghostty/Library/Application\ Support/com.mitchellh.ghostty/
-mv ~/Library/Application\ Support/com.mitchellh.ghostty/config ghostty/Library/Application\ Support/com.mitchellh.ghostty/config
-```
-
 With your *dot* packages available, you can push them to your machine:
 
 ```sh
@@ -27,7 +21,7 @@ dot ghostty
 ```
 
 ## Roadmap 
-- [ ] Move away from Swift adopting Rust or Zig languages
+- [X] Move away from Swift adopting Rust or Zig languages
 - [X] Include support to "dot-" prefix pre-processing based on a --dotfiles flag (similar to `stow <package> --dotfiles` behavior);
 - [ ] Include a command to add a package in the dot directory, using --adopt flag (running the `mkdir` and `mv` commands can be quite boring);
 
@@ -35,26 +29,20 @@ dot ghostty
 Dot is still under development and I decided to only make a release when it's core features are unit-tested.
 Given this scenario, if you want to use Dot's binary, you will need to build it yourself.
 
-Check [Swift](https://www.swift.org/install/macos/)'s guide on how to install it, after that, clone the Dot project:
+Check [Zig](https://ziglang.org/learn/getting-started/)'s guide on how to install it, after that, clone the Dot project:
 
 ```sh
-git clone https://github.com/thigcampos/dot.git
+git clone https://github.com/avantguarda/dot.git
 
 ```
 
 Then, enter the directory and run:
 
 ```sh
-swift build -c release -Xswiftc -Osize
+zig build --release
 ```
 
-If your really cares about the binary size (it's normally 1.4MB), you can run:
-
-```sh
-strip -u -r .build/release/dot
-```
-Reducing the binary size to 636K. 
-The binary will be available under `dot/.build/debug/dot`.
+The binary will be available under `zig-out/bin/dot`.
 
 ## Contribution
 Dot is developed completely in the open source model, and your contributions are more than welcome.
