@@ -1,40 +1,37 @@
 const std = @import("std");
-const toml = @import("toml");
+const builtin = @import("builtin");
 
-const DotfilesHashMap = struct {
-    source: []const u8,
-    destination: []const u8,
-};
-const Dotfiles = struct {
-    files: []DotfilesHashMap,
+const printVersion = @import("cli/version.zig").printVersion;
+const sync = @import("cli/sync.zig").sync;
+const printHelp = @import("cli/help.zig").printHelp;
+
+const Command = enum {
+    //version
+    @"-v",
+    @"--version",
+    //help
+    @"-h",
+    @"--help",
+    //commands
+    sync,
 };
 
-const Dot = struct {
-    dotpath: []const u8,
-};
-
-// Represents the whole dot.toml config file
-const Config = struct {
-    dot: Dot,
-    dotfiles: Dotfiles,
-};
+pub const gpa = std.heap.smp_allocator;
 
 pub fn main() !void {
-    var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-    defer _ = gpa.deinit();
-    const allocator = gpa.allocator();
+    const args = try std.process.argsAlloc(gpa);
+    defer std.process.argsFree(gpa, args);
 
-    var parser = toml.Parser(Config).init(allocator);
-    defer parser.deinit();
+    var cmd: Command = .@"--help";
+    if (args.len >= 2) {
+        if (std.meta.stringToEnum(Command, args[1])) |parsed_cmd| {
+            cmd = parsed_cmd;
+        }
+    }
 
-    var result = try parser.parseFile("./examples/example.toml");
-    defer result.deinit();
-
-    const config = result.value;
-
-    std.debug.print("{s}\n", .{config.dot.dotpath});
-
-    for (config.dotfiles.files) |file| {
-        std.debug.print("{s}\n", .{file.source});
+    switch (cmd) {
+        .@"--version", .@"-v" => try printVersion(),
+        .@"-h", .@"--help" => printHelp(),
+        .sync => try sync(),
     }
 }
